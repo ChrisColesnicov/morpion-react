@@ -1,0 +1,80 @@
+.app {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  flex-direction: column;
+  background-color: #444444;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+.intro-text {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 35ch;
+  margin-bottom: 1rem;
+}
+
+.keep-on-msg {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.gameboard {
+  width: 300px;
+  height: 300px;
+  border: solid 2px black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: solid 1px black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rond {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: solid 20px white;
+  box-sizing: border-box;
+}
+
+.croix {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.croix:before,
+.croix:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 102, 0);
+}
+
+.croix:before {
+  left: 50%;
+  width: 30%;
+  height: 100%;
+  margin-left: -15%;
+}
+
+.croix:after {
+  top: 50%;
+  height: 30%;
+  width: 100%;
+  margin-top: -15%;
+}
